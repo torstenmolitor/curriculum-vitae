@@ -1,0 +1,45 @@
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{lmodern} % font package
+\usepackage{tabu}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{titlesec}
+
+\geometry{
+margin=2.2cm,
+top=2.2cm,
+bottom=2cm,
+}
+
+\definecolor{subsectioncolor}{rgb}{0, 0.12, 0.24}
+\definecolor{sectioncolor}{rgb}{0, 0.2, 0.4}
+
+\titleformat{\section}{\color{sectioncolor}\normalfont\Large}{}{0pt}{}
+
+\titlespacing\section{0pt}{2pt plus 1pt minus 1pt}{2pt plus 1pt minus 1pt}
+
+\newcommand{\icon}[1]{\alignbox{\includegraphics[width=1em]{icons/#1}}{c}}
+
+\newcommand{\entry}[3]{{\bf \textcolor{subsectioncolor}{#1}}\newline
+\begin{tabu} to \linewidth {X[3, l] | X[10, l]}
+{\small \it #2} & {\small #3}
+\end{tabu}
+}
+
+
+\newcommand{\alignbox}[2]{\begingroup
+\setbox0=\hbox{#1}%
+\parbox[#2]{\wd0}{\box0}
+\endgroup}
+
+\setlength\parindent{0pt}
+\setlength\tabcolsep{5pt}
+\setlength\parskip{5pt}
+
+\renewcommand\arraystretch{1.2}
+\renewcommand{\labelitemi}{--}
+
+\pagenumbering{gobble}

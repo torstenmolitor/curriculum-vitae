@@ -1,0 +1,29 @@
+\documentclass[a4paper]{article}
+
+%%% write your own source data folder
+\newcommand{\src}{example-source}
+% \newcommand{\src}{source}
+
+\input{preamble}
+\input{\src/contact}
+
+\begin{document}
+
+\input{header}
+
+\section{Education}
+\input{\src/education}
+
+\section{Employment History}
+\input{\src/employment}
+
+\section{Voluntary Work}
+\input{\src/volontary}
+
+\section{Skills}
+\input{\src/skills}
+
+\section{Awards}
+\input{\src/awards}
+
+\end{document}
