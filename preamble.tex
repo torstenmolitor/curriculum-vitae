@@ -9,8 +9,9 @@
 \usepackage{titlesec}
 
 \geometry{
-margin=2.2cm,
-top=2.2cm,
+%margin=2.7cm,
+margin=3.0cm,
+top=2.5cm,
 bottom=2cm,
 }
 
@@ -24,7 +25,8 @@ bottom=2cm,
 \newcommand{\icon}[1]{\alignbox{\includegraphics[width=1em]{icons/#1}}{c}}
 
 \newcommand{\entry}[3]{{\bf \textcolor{subsectioncolor}{#1}}\newline
-\begin{tabu} to \linewidth {X[3, l] | X[10, l]}
+% \begin{tabu} to \linewidth {X[3, l] | X[10, l]}
+\begin{tabu} to \linewidth {X[4, l] | X[10, l]}
 {\small \it #2} & {\small #3}
 \end{tabu}
 }
