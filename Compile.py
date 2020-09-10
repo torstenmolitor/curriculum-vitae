@@ -40,15 +40,15 @@ class Document:
             contents_main = main.read()
 
         new_contents_main = contents_main.replace('geometry-default', 'geometry-dynamic')
-        self.document_name += '-dynamic'
+        self.document_name = 'main-dynamic'
 
         with open(self.document_name + '.tex', 'w') as main:
             main.write(new_contents_main)
 
-        with open('dynamic-geometry-template.tex', 'r') as file:
+        with open('geometry-dynamic-template.tex', 'r') as file:
             dynamic_geometry = Template(template=file.read()).substitute(**geometry)
 
-        with open('dynamic-geometry.tex', 'w') as file:
+        with open('geometry-dynamic.tex', 'w') as file:
             file.write(dynamic_geometry)
 
 
