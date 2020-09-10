@@ -6,7 +6,7 @@ from skopt import gbrt_minimize
 import matplotlib.pyplot as plt
 import skopt.plots
 
-DEFAULT_GEOMETRY = {'margin': 3.0, 'top': 2.5, 'bottom': 2.0,
+DEFAULT_GEOMETRY = {'margin': 3.0, 'top': 2.5, 'bottom': 2.5,
                     'tabcolsep': 5.0, 'parskip': 5.0, 'arraystretch': 1.2}
 
 def get_interval_width(interval, points_per_inch=72):
