@@ -9,6 +9,7 @@ import skopt.plots
 DEFAULT_GEOMETRY = {'margin': 3.0, 'top': 2.5, 'bottom': 2.5,
                     'tabcolsep': 5.0, 'parskip': 5.0, 'arraystretch': 1.2}
 
+
 def get_interval_width(interval, points_per_inch=72):
     """
     Helper function to get the width of an intervaltree. Interval
@@ -83,12 +84,8 @@ def tune():
     return best_geometry, tune_results
 
 
-
 if __name__ == '__main__':
     DOC = Document()
-
-    geo = {'margin': 3.4371124456259503, 'top': 2.5, 'bottom': 2.0, 'tabcolsep': 5.0, 'parskip': 5.0, 'arraystretch': 1.2}
-    DOC.compile()
 
     best_geometry, tune_results = tune()
 
