@@ -7,6 +7,7 @@ class Compiler:
 
 
 class PdfLatex(Compiler):
+
     def compile_command(self, job_name):
         if job_name == '':
             return 'pdflatex'
@@ -15,26 +16,36 @@ class PdfLatex(Compiler):
 
 
 class LatexMake(Compiler):
-    def __str__(self):
+
+    def compile_command(self):
         return 'latexmk'
+
+    def clean(self):
+        return os.system(self.compile_command() + ' -C')
 
 
 class Document:
-    def __init__(self, document_name='main', job_name='cv', compiler=PdfLatex):
+    def __init__(self, document_name='main', job_name='main', compiler=PdfLatex()):
         self.document_name = document_name
         self.job_name = job_name
-        self.compiler = compiler()
+        self.compiler = compiler
 
-    def compile(self, geometry=None):
+    def compile(self, geometry=None, job_name=None):
         """Compiles the Latex document to a pdf"""
 
         if geometry is not None:
             self.set_params(geometry)
 
-        os.system(f'{self.compiler.compile_command(job_name=self.job_name)} {self.document_name}')
+        if job_name is None:
+            job_name = self.job_name
+
+        os.system(f'{self.compiler.compile_command(job_name=job_name)} {self.document_name}')
+
+        return job_name + '.pdf'
 
     def set_params(self, geometry):
-        """Arranges the document with dynamic params"""
+        """Arranges the main document to use dynamic params and
+         substitutes the specified geometry into the geometry template"""
 
         with open(self.document_name + '.tex', 'r') as main:
             contents_main = main.read()
