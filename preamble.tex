@@ -1,14 +1,20 @@
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
 \usepackage[english]{babel}
 \usepackage{geometry}
 \usepackage{hyperref}
-\usepackage{lmodern} % font package
+% \usepackage{lmodern} % font package
+
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+
 \usepackage{tabu}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{titlesec}
 
-\definecolor{subsectioncolor}{rgb}{0, 0.12, 0.24}
+% \definecolor{subsectioncolor}{rgb}{0, 0.12, 0.24}
+\definecolor{subsectioncolor}{rgb}{0, 0, 0}
 \definecolor{sectioncolor}{rgb}{0, 0.2, 0.4}
 
 \titleformat{\section}{\color{sectioncolor}\normalfont\Large}{}{0pt}{}
@@ -21,7 +27,7 @@
 \begin{tabu} to \linewidth {X[\leftcol, l] | X[\rightcol, l]}
 {\small \it #2} & {\small #3}
 \end{tabu}
-}
+\vspace*{2pt}}
 
 \newcommand{\alignbox}[2]{\begingroup
 \setbox0=\hbox{#1}%
