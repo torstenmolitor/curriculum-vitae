@@ -1,8 +1,17 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cv}[]
+
+\LoadClass[a4paper]{article}
+
 \RequirePackage{xcolor}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
+\RequirePackage{hyperref}
+\RequirePackage{tabu}
+\RequirePackage{graphicx}
+\RequirePackage{geometry}
+\RequirePackage{lipsum}
+\RequirePackage{multicol}
 
 \newif\ifinenglish
 \DeclareOption{english}{\inenglishtrue}
@@ -12,34 +21,14 @@
 \DeclareOption{portrait}{\useportraittrue}
 
 \definecolor{subsectioncolor}{RGB}{0, 0, 0}
-\definecolor{sectioncolor}{RGB}{36, 56, 156}
-
-\renewcommand*\familydefault{\sfdefault}
+\definecolor{sectioncolor}{RGB}{40, 47, 128}	% default
+\DeclareOption{blue}{\definecolor{sectioncolor}{RGB}{40, 47, 128}}
+\DeclareOption{turkoise}{\definecolor{sectioncolor}{RGB}{40, 122, 128}}
+\DeclareOption{green}{\definecolor{sectioncolor}{RGB}{40, 128, 84}}
 
 \ProcessOptions\relax
-\LoadClass[a4paper]{article}
 
-\RequirePackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=sectioncolor,
-    urlcolor=sectioncolor,
-}
-
-\RequirePackage{tabu}
-\RequirePackage{graphicx}
-\RequirePackage{geometry}
-
-\RequirePackage{lipsum}
-
-\renewcommand{\section}{%
-    \@startsection
-    {section}{1}{0pt}
-	{0ex plus -1ex minus -1ex}%
-    {1ex plus .2ex}{\Large\color{sectioncolor}}%
-}
-
-\setcounter{secnumdepth}{0}	% no numbering of sections
+\renewcommand*\familydefault{\sfdefault}
 
 \ifinenglish
 	\RequirePackage[english]{babel}
@@ -47,11 +36,28 @@
 	\RequirePackage[swedish]{babel}
 \fi
 
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=sectioncolor,
+    urlcolor=sectioncolor,
+}
+
+\renewcommand{\section}{%
+    \@startsection
+    {section}{1}{0pt}	% {}{secnum-ish}{indentation}
+	{1.1ex plus -1ex minus -1ex}	% above
+    {.2ex plus .2ex}						% below
+    {\large\bf\color{sectioncolor}}	% font spec.
+}
+
+\setcounter{secnumdepth}{0}	% no numbering of sections
+
 \newcommand{\icon}[1]{\alignbox{\includegraphics[width=1em]{icons/#1}}{c}}
 
-\newcommand{\entry}[6]{{\bf \textcolor{subsectioncolor}{#1}}, \textcolor{subsectioncolor}{#2} \hfill {\small \it #3 -- #4} \newline
+\newcommand{\entry}[6]{{\bf #1} \hfill {\small\it #5, #3 -- #4} \newline
 \begin{tabu} to \linewidth {X[\leftcol, l] | X[\rightcol, l]}
-{\small \it #5} & {\small #6}
+{\small #2} & {\small #6}
 \end{tabu}
 \vspace*{2pt}}
 
