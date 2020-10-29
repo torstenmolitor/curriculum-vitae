@@ -24,7 +24,8 @@
 \definecolor{sectioncolor}{RGB}{40, 47, 128}	% default
 \DeclareOption{blue}{\definecolor{sectioncolor}{RGB}{40, 47, 128}}
 \DeclareOption{turkoise}{\definecolor{sectioncolor}{RGB}{40, 122, 128}}
-\DeclareOption{green}{\definecolor{sectioncolor}{RGB}{40, 128, 84}}
+\DeclareOption{green}{\definecolor{sectioncolor}{RGB}{19, 133, 93}}
+\DeclareOption{brown}{\definecolor{sectioncolor}{RGB}{128, 62, 40}}
 
 \ProcessOptions\relax
 
