@@ -30,6 +30,8 @@
 \RequirePackage{graphicx}
 \RequirePackage{geometry}
 
+\RequirePackage{lipsum}
+
 \renewcommand{\section}{%
     \@startsection
     {section}{1}{0pt}
