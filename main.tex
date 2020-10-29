@@ -1,12 +1,7 @@
-\documentclass[a4paper]{article}
+\documentclass[portrait,english]{cv}
 
-%%% write your own source data folder
-%\newcommand{\src}{example-source}
-
-% private source is stored in Drive folder
+% source is stored in Drive folder
 \newcommand{\src}{"../../Google Drive/cv-source"}
-
-\input{preamble}
 
 \input{geometry-default}
 
@@ -16,24 +11,14 @@
 
 \input{header}
 
-\input{\src/introduction}
-
-\section{Education}
 \input{\src/education}
 
-\vspace*{-5pt}
-\section{Experience}
 \input{\src/employment}
 
-\vspace*{-5pt}
-\section{Voluntary Work}
 \input{\src/voluntary}
 
-\vspace*{-5pt}
-\section{Skills}
 \input{\src/skills}
 
-%\section{Awards}
-%\input{\src/awards}
+\input{\src/awards}
 
 \end{document}
