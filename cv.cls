@@ -37,7 +37,6 @@
 	\RequirePackage[swedish]{babel}
 \fi
 
-
 \hypersetup{
     colorlinks=true,
     linkcolor=sectioncolor,
