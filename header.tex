@@ -1,36 +1,37 @@
-\fancyhf{}	% clear headers and footers
-\renewcommand{\headrulewidth}{0pt}	% no rule on top of page
-\lfoot{\name}
-\cfoot{\icon{envelope.png}\hspace*{2pt}\href{mailto:\email}{\email}}
-\rfoot{\icon{linkedin.png}\hspace*{2pt}\href{https://linkedin.com/in/\linkedin}{/\linkedin}}
-\thispagestyle{plain}	% no fancyheader on first page
-\pagestyle{fancy}	% activate on second++ page
-
-\newcommand{\portraitbox}{
-	\begin{minipage}[c]{0.14\linewidth}
-	\includegraphics[width=\linewidth]{\src/portrait.jpg}
-	\end{minipage}
-	\hspace*{6pt}	% a horizontal gap between the Portrait and the {Name and Contact} boxes
-}
-\newcommand{\namebox}{
-	\begin{minipage}[c]{0.5\linewidth}
-	\fontsize{28}{0}\selectfont \name
-	\end{minipage}
-	\hfill
-}
-\newcommand{\contactbox}{
-	\begin{minipage}[b]{0.48\linewidth}
-	\begin{flushright}
-	\setlength{\tabcolsep}{2pt}
-	\begin{tabular}{c l @{\hspace*{10pt}} c l}
-	\icon{id-card.png} 		& \birthday & 
-	\icon{envelope.png} 	& \href{mailto:\email}{\email} \\
-	\icon{telephone.png}	& \phone &
-	\icon{linkedin.png} 	& \href{https://linkedin.com/in/\linkedin}{/\linkedin} 
-	\end{tabular}
-	\end{flushright}
-	\end{minipage}
-}
+%\fancyhf{}	% clear headers and footers
+%\renewcommand{\headrulewidth}{0pt}	% no rule on top of page
+%\lfoot{\name}
+%\cfoot{\icon{envelope.png}\hspace*{2pt}\href{mailto:\email}{\email}}
+%\rfoot{\icon{linkedin.png}\hspace*{2pt}\href{https://linkedin.com/in/\linkedin}{/\linkedin}}
+%\thispagestyle{plain}	% no fancyheader on first page
+%\pagestyle{fancy}	% activate on second++ page
+%
+%\newcommand{\portraitbox}{
+%	\begin{minipage}[c]{0.14\linewidth}
+%	\includegraphics[width=\linewidth]{\src/portrait.jpg}
+%	\end{minipage}
+%	\hspace*{6pt}	% a horizontal gap between the Portrait and the {Name and Contact} boxes
+%}
+%
+%\newcommand{\namebox}{
+%	\begin{minipage}[c]{0.5\linewidth}
+%	\fontsize{28}{0}\selectfont \name
+%	\end{minipage}
+%	\hfill
+%}
+%\newcommand{\contactbox}{
+%	\begin{minipage}[b]{0.48\linewidth}
+%	\begin{flushright}
+%	\setlength{\tabcolsep}{2pt}
+%	\begin{tabular}{c l @{\hspace*{10pt}} c l}
+%	\icon{id-card.png} 		& \birthday & 
+%	\icon{envelope.png} 	& \href{mailto:\email}{\email} \\
+%	\icon{telephone.png}	& \phone &
+%	\icon{linkedin.png} 	& \href{https://linkedin.com/in/\linkedin}{/\linkedin} 
+%	\end{tabular}
+%	\end{flushright}
+%	\end{minipage}
+%}
 
 \ifuseportrait
 	\portraitbox

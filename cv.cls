@@ -54,19 +54,6 @@
 
 \setcounter{secnumdepth}{0}	% no numbering of sections
 
-\newcommand{\icon}[1]{\alignbox{\includegraphics[width=1em]{icons/#1}}{c}}
-
-\newcommand{\entry}[6]{{\bf #1} \hfill {\small\it #5, #3 -- #4} \newline
-\begin{tabu} to \linewidth {X[\leftcol, l] | X[\rightcol, l]}
-{\small #2} & {\small #6}
-\end{tabu}
-\vspace*{2pt}}
-
-\newcommand{\alignbox}[2]{\begingroup
-\setbox0=\hbox{#1}%
-\parbox[#2]{\wd0}{\box0}
-\endgroup}
-
 \setlength\parindent{0pt}
 
 \renewcommand{\labelitemi}{--}
