@@ -12,6 +12,7 @@
 \RequirePackage{geometry}
 \RequirePackage{lipsum}
 \RequirePackage{multicol}
+\RequirePackage{fancyhdr}%
 
 \newif\ifinenglish
 \DeclareOption{english}{\inenglishtrue}
