@@ -1,3 +1,11 @@
+\fancyhf{}	% clear headers and footers
+\renewcommand{\headrulewidth}{0pt}	% no rule on top of page
+\lfoot{\name}
+\cfoot{\icon{envelope.png}\hspace*{2pt}\href{mailto:\email}{\email}}
+\rfoot{\icon{linkedin.png}\hspace*{2pt}\href{https://linkedin.com/in/\linkedin}{/\linkedin}}
+\thispagestyle{plain}	% no fancyheader on first page
+\pagestyle{fancy}	% activate on second++ page
+
 \newcommand{\portraitbox}{
 	\begin{minipage}[c]{0.14\linewidth}
 	\includegraphics[width=\linewidth]{\src/portrait.jpg}
