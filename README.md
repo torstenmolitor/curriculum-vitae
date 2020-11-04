@@ -1,2 +1,4 @@
 # curriculum-vitae
-A Latex template for my CV.
+The Latex class and template for my CV.
+
+<div>Icons from <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
