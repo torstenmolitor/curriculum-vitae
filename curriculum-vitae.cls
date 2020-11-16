@@ -22,7 +22,8 @@
 \DeclareOption{portrait}{\useportraittrue}
 
 \definecolor{subsectioncolor}{RGB}{0, 0, 0}
-\definecolor{sectioncolor}{RGB}{40, 47, 128}	% default
+\definecolor{sectioncolor}{RGB}{0, 0, 0}	% default section title color is black
+
 \DeclareOption{blue}{\definecolor{sectioncolor}{RGB}{40, 47, 128}}
 \DeclareOption{turkoise}{\definecolor{sectioncolor}{RGB}{40, 122, 128}}
 \DeclareOption{green}{\definecolor{sectioncolor}{RGB}{19, 133, 93}}
