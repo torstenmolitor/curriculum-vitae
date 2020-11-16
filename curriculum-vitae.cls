@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cv}[]
+\ProvidesClass{curriculum-vitae}[]
 
 \LoadClass[a4paper]{article}
 
