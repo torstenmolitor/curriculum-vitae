@@ -6,5 +6,5 @@ The Latex class and template for my CV.
 ## Usage
 
 ```bash
-pdflatex cv.tex
+make
 ```
